@@ -34,7 +34,8 @@ void pop() {
 		return;//1.b
 	}
 
-	cout << "\n"
+	cout << "\nThe popped element is:" << stack_array[top  << endl; // step 2
+	top--;; // step 3 docrement
 }
 
 int main() {
@@ -57,7 +58,15 @@ int main() {
 			s.push(element);
 			break;
 		}
-				case
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3':
+			s.display()
 		}
 	}
 }
