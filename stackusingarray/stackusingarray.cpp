@@ -69,7 +69,9 @@ int main() {
 			s.display();
 			break;
 		case '4':
-			return
+			return 0;
+		default:
+			cout << "\nInvalid choice" << endl;
 		}
 	}
 }
