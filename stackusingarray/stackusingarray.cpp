@@ -13,7 +13,9 @@ public:
 	StackArray() {
 		top = -1;
 	}
-	int push(int element) {
+	int push() {
+		int element;
+		cin >> element;
 		if (top == 4) {// step 1
 			cout << "Number of data exceeds the limit." << endl;
 			return 0;
@@ -25,18 +27,36 @@ public:
 		cout << element << "ditambahkan(pushend)" << endl;
 
 		return element;
+		}
+	};
+
+	void pop() {
+		if (empty()) {// step 1
+			cout << "\nStack is empty, Cannot pop." << endl;//1.a
+			return;//1.b
+			}
+		cout << "\nThe popped element is:" << stack_array[top]  << endl; // step 2
+		top--;; // step 3 docrement
+		}
+	};
+
+	//method fo check if data is empty
+	bool empty() {
+		return (top == -1);
+	}
+
+	void display() {
+		if (empty()) {
+			cout << '\nStack is empty.' << endl;
+		}
+		else {
+			for (int tmp = top; tmp >= 0; tmp--) {
+				cout << stack_array[tmp] << endl;
+			}
+		}
 	}
 };
 
-void pop() {
-	if (empty()) {// step 1
-		cout << "\nStack is empty, Cannot pop." << endl;//1.a
-		return;//1.b
-	}
-
-	cout << "\nThe popped element is:" << stack_array[top  << endl; // step 2
-	top--;; // step 3 docrement
-}
 
 int main() {
 	StackArray s;
@@ -53,9 +73,7 @@ int main() {
 		switch (ch) {
 		case '1': {
 			cout << "\nEnter an Element: ";
-			int element;
-			cin >> element;
-			s.push(element);
+			s.push();
 			break;
 		}
 		case '2':
