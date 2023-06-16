@@ -23,7 +23,7 @@ public:
 
 		top++;
 		stack_array[top] = element; // step 3
-		cout << endl;
+		cout << endl; 
 		cout << element << "ditambahkan(pushend)" << endl;
 
 		return element;
