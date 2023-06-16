@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-class Stack {
+class StackArray {
 private: 
 	int stack_array[5];
 	int top;
@@ -13,6 +12,7 @@ public:
 	StackArray() {
 		top = -1;
 	}
+
 	int push() {
 		int element;
 		cin >> element;
@@ -28,7 +28,6 @@ public:
 
 		return element;
 		}
-	};
 
 	void pop() {
 		if (empty()) {// step 1
@@ -36,9 +35,8 @@ public:
 			return;//1.b
 			}
 		cout << "\nThe popped element is:" << stack_array[top]  << endl; // step 2
-		top--;; // step 3 docrement
+		top--; // step 3 docrement
 		}
-	};
 
 	//method fo check if data is empty
 	bool empty() {
@@ -47,7 +45,7 @@ public:
 
 	void display() {
 		if (empty()) {
-			cout << '\nStack is empty.' << endl;
+			cout << "\nStack is empty." << endl;
 		}
 		else {
 			for (int tmp = top; tmp >= 0; tmp--) {
