@@ -20,23 +20,22 @@ public:
 			cout << "Number of data exceeds the limit." << endl;
 			return 0;
 		}
-		 
+
 		top++;
 		stack_array[top] = element; // step 3
 		cout << endl;
 		cout << element << "ditambahkan(pushend)" << endl;
 
 		return element;
-		}
-
+	}
 	void pop() {
 		if (empty()) {// step 1
 			cout << "\nStack is empty, Cannot pop." << endl;//1.a
 			return;//1.b
-			}
-		cout << "\nThe popped element is:" << stack_array[top]  << endl; // step 2
-		top--; // step 3 docrement
 		}
+		cout << "\nThe popped element is:" << stack_array[top] << endl; // step 2
+		top--; // step 3 docrement
+	}
 
 	//method fo check if data is empty
 	bool empty() {
