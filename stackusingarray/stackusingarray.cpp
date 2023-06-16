@@ -4,7 +4,7 @@
 using namespace std;
 
 class Stack {
-private:
+private: 
 	int stack_array[5];
 	int top;
 
